@@ -15,6 +15,11 @@ struct Signal {
   byte toggle;
 };
 
+struct BatteryStatus {
+  byte percentage;
+};
+
+
 Signal data;
 unsigned long prevTransmitTime = 0;
 const unsigned int transmitInterval = 20; // 20ms interval (50Hz)
@@ -78,5 +83,6 @@ void loop() {
 
     u8g2.sendBuffer();
 
+      
   }
 }
